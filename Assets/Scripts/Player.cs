@@ -28,6 +28,12 @@ public class Player : MonoBehaviour
             thisAnimation.Play();
             rb.velocity = transform.up * velocity;
         }
+        
+        if(addScore >= 500)
+        {
+            SceneManager.LoadScene("Win");
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
